@@ -24,14 +24,14 @@ def left_rotate (t):
     r.left = t
     return r
 
-
-t = Node(5)
-t.left = Node(3)
-t.left.left = Node(2)
-t.left.right = Node(4)
-t.right = Node(7)
-t.right.right = Node(8)
-t.right.right.right = Node(9)
+# Example BST
+# t = Node(5)
+# t.left = Node(3)
+# t.left.left = Node(2)
+# t.left.right = Node(4)
+# t.right = Node(7)
+# t.right.right = Node(8)
+# t.right.right.right = Node(9)
 
 def bst_min_node(t):
     if t == None:
@@ -118,5 +118,3 @@ def bst_insert(t,k):
                 t = t.right
 
 #def bst_delete(t,k):
-
-
