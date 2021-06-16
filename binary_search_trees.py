@@ -48,6 +48,35 @@ def bst_max_node(t):
     return t
 
 
+# To find the minimum, we go as far left as possible.
+def bst_min(t):                 # minimum key in t
+    if t == None:
+        return None
+    while t.left != None:
+        t = t.left
+    return t.key
+
+# To find the maximum, we go as far right as possible
+def bst_max(t):                 # maximum key in t
+    if t == None:
+        return None
+    while t.right != None:
+        t = t.right
+    return t.key
+
+# Returns number of nodes
+def bst_size(t):
+    if t == None:
+        return 0
+    else:
+        return bst_size(t.left) + 1 + bst_size(t.right)
+
+# Returns height of tree
+def bst_height(t):
+    if t == None:
+        return 0
+    else:
+        return 1 + max(bst_height(t.left), bst_height(t.right))
 
 def bst_next(t):
     # next node in the natural order of keys
